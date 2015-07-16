@@ -1,0 +1,27 @@
+{
+    "name": "feijs/morris-graphs",
+    "description": "Generate morris graphs for laravel",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mike Feijs",
+            "email": "mike@feijs.nl"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "twitter/bootstrap": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "2.2.*",
+        "mockery/mockery": "~0.9", 
+        "phpunit/phpunit": "4.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Feijs\\MorrisGraphs": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
