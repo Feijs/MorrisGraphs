@@ -1,6 +1,7 @@
 # MorrisGraphs
+![](https://travis-ci.org/Feijs/MorrisGraphs.svg?branch=master)
 
-This package provides a class to easily generate dynamic graphs with Morris.js
+This package provides a class to easily generate dynamic graphs with [Morris.js](http://morrisjs.github.io/morris.js/)
 
 ## Installation
 
@@ -54,10 +55,30 @@ Then in your view include the following:
 
 //Or
 
-{{ $graph->fixed([/*data*/], ['quantity1', 'quantity2']) }}	
+{{ $graph->fixed([$source_data], ['quantity1', 'quantity2']) }}	
 
 ```
 For Donut graphs the second parameter may be ommitted
+
+### Data
+
+Source data should be organised as follows:
+```php
+[ 
+	['x-key' => 'x-value', 'y1' => 'y1-value', 'y2' => `y2-value`, ...],
+	['x-key' => 'x-value', 'y1' => 'y1-value', 'y2' => `y2-value`, ...],
+	...
+]
+```
+
+Except for donuts graphs, where it should be: 
+```php
+[ 
+	['label' => 'Label1', 'value' => 'Value1'],
+	['label' => 'Label2', 'value' => 'Value2'],
+	...
+]
+```
 
 ### Settings
 
@@ -90,3 +111,13 @@ The height of the graph, defaults to 250px
 ```php
 $graph->setHeight('300px');
 ```
+
+### Label translations
+You can specify a file with translations for the graph labels and error message(s) in the config
+
+* Publish the package config files
+```bash
+php artisan config:publish "feijs/morris-graphs"
+```
+* Set the translation file in `translations.labels` or `translation.messages`
+

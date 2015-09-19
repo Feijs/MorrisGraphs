@@ -7,5 +7,6 @@ return array(
 	'hours' => 'Uren',
 	'day'	=> 'Dagen',
 	'revenue' => 'Omzet',
-	'debit' => 'Debet'
+	'debit' => 'Debet',
+	'students' => 'Studenten'
 );

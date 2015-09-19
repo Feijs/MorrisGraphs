@@ -64,7 +64,7 @@ class Factory
      * @param string[] $descriptors
      * @return string
      */
-    public function dynamice($source_url, $descriptors = null)
+    public function dynamic($source_url, $descriptors = null)
     {
     	$replacers = [
             'id' 			=> $this->getGraphId(),
