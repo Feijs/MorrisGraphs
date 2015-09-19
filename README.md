@@ -8,15 +8,8 @@ Add the package in `composer.json` and run `composer update`
 
 ```php
 "require": {
-	...
 	"feijs/morris-graphs": "dev-master"
 }
-"repositories": [ 
-	{
-		"type": "vcs",
-        "url": "https://github.com/Feijs/morris-graphs" 
-    }
-],
 ```
 
 Add the ServiceProvider to the providers in `config\app.php`
